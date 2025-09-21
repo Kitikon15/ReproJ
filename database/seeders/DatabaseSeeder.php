@@ -22,5 +22,14 @@ class DatabaseSeeder extends Seeder
 
         // create admin user
         $this->call(AdminUserSeeder::class);
+        
+        // Seed program data
+        $this->call(ProgramSeeder::class);
+        
+        // Seed faculty, news, and achievements
+        $this->call(FacultySeeder::class);
+        $this->call(NewsSeeder::class);
+        $this->call(AchievementSeeder::class);
+        $this->call(VideoSeeder::class);
     }
 }
