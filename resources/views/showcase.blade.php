@@ -225,15 +225,39 @@
         
         <div class="news-grid">
             <div class="news-item">
-                <h4 class="news-title">ปันเนะและเกษปูนขาด 2566</h4>
+                <h4 class="news-title">ปันเนะและเกษตรขมข่าค 2566</h4>
                 <p class="news-year">ปี 2023</p>
-                <p class="news-description">โครงการเก็บข้อมูลด้านการเรียนการสอนและโครงการและเกษปูนขาดคุณภาพการศึกษาสำหรับปี 2566</p>
+                <p class="news-description">โครงการเก็บข้อมูลด้านการเรียนการสอนและโครงการและเกษตรขมข่าคคุณภาพการศึกษาสำหรับปี 2566</p>
             </div>
             
             <div class="news-item">
                 <h4 class="news-title">เอกสาร และคู่มือการใช้งาน 2565</h4>
                 <p class="news-year">ปี 2022</p>
                 <p class="news-description">งานประชุมวิชาการสัมนาทาง ครั้งที่ 15 มกราคม2566เรื่อง นายกปัญญา</p>
+            </div>
+            
+            <div class="news-item">
+                <h4 class="news-title">โครงการพัฒนาแอปพลิเคชันมือถือ</h4>
+                <p class="news-year">ปี 2024</p>
+                <p class="news-description">นักศึกษาชั้นปีที่ 4 พัฒนาแอปพลิเคชันสำหรับการจัดการข้อมูลนักศึกษาและการเรียนการสอน</p>
+            </div>
+            
+            <div class="news-item">
+                <h4 class="news-title">การแข่งขันเขียนโปรแกรมระดับชาติ</h4>
+                <p class="news-year">ปี 2024</p>
+                <p class="news-description">นักศึกษาเข้าร่วมการแข่งขันเขียนโปรแกรมระดับชาติ ACM-ICPC และได้รับรางวัลชมเชย</p>
+            </div>
+            
+            <div class="news-item">
+                <h4 class="news-title">โครงการสหกิจศึกษา</h4>
+                <p class="news-year">ปี 2023</p>
+                <p class="news-description">นักศึกษาเข้าร่วมโครงการสหกิจศึกษากับบริษัทชั้นนำในด้านเทคโนโลยีสารสนเทศ</p>
+            </div>
+            
+            <div class="news-item">
+                <h4 class="news-title">งานวิจัยด้าน AI และ Machine Learning</h4>
+                <p class="news-year">ปี 2023</p>
+                <p class="news-description">นักศึกษาและอาจารย์ร่วมกันทำวิจัยด้านปัญญาประดิษฐ์และการเรียนรู้ของเครื่อง</p>
             </div>
         </div>
     </div>
@@ -254,6 +278,30 @@
                 <h4 class="alumni-title">นักศึกษาได้รับเปลี่ยนภาษาที่เวียดนาม</h4>
                 <p class="alumni-description">นักศึกษาที่ได้รับทุนเปลี่ยนภาษา</p>
                 <p class="alumni-meta">สถาบันการศึกษาในเวียดนาม</p>
+            </div>
+            
+            <div class="alumni-item">
+                <h4 class="alumni-title">คิษย์เก่าที่ทำงานในบริษัทชั้นนำ</h4>
+                <p class="alumni-description">ศิษย์เก่าที่ไปทำงานในบริษัทเทคโนโลยีชั้นนำอย่าง Google, Microsoft, Apple</p>
+                <p class="alumni-meta">Software Engineer ที่ Silicon Valley</p>
+            </div>
+            
+            <div class="alumni-item">
+                <h4 class="alumni-title">ผู้พัฒนา Startup ด้านเทคโนโลยี</h4>
+                <p class="alumni-description">ศิษย์เก่าที่ก่อตั้งบริษัท Startup ด้าน FinTech และ E-commerce ที่ประสบความสำเร็จ</p>
+                <p class="alumni-meta">CEO/CTO ของบริษัท Startup</p>
+            </div>
+            
+            <div class="alumni-item">
+                <h4 class="alumni-title">นักวิจัยและผู้พัฒนาระบบ AI</h4>
+                <p class="alumni-description">ศิษย์เก่าที่เป็นนักวิจัยและผู้พัฒนาระบบปัญญาประดิษฐ์และ Machine Learning</p>
+                <p class="alumni-meta">Research Scientist และ AI Developer</p>
+            </div>
+            
+            <div class="alumni-item">
+                <h4 class="alumni-title">อาจารย์มหาวิทยาลัย</h4>
+                <p class="alumni-description">ศิษย์เก่าที่กลับมาทำงานสอนและถ่ายทอดความรู้ให้กับรุ่นหลัง</p>
+                <p class="alumni-meta">อาจารย์ประจำของมหาวิทยาลัยชั้นนำ</p>
             </div>
         </div>
     </div>

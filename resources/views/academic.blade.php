@@ -366,6 +366,73 @@
             border: 1px solid rgba(255,255,255,0.3);
         }
 
+        /* Faculty Section Styles */
+        .faculty-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .faculty-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .faculty-avatar {
+            width: 80px;
+            height: 80px;
+            background: #2989d8;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .faculty-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .faculty-title {
+            font-size: 0.95rem;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .faculty-department {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .faculty-email {
+            font-size: 0.85rem;
+            color: #2989d8;
+        }
+
         .footer {
             background: #2c3e50;
             color: white;
@@ -566,6 +633,65 @@
 
     <section class="content-section">
         <div class="container">
+            <!-- Faculty Section -->
+            <div class="faculty-section">
+                <h2 class="section-title">
+                    <i class="fas fa-users"></i>
+                    อาจารย์ผู้สอน
+                </h2>
+                
+                <div class="faculty-grid">
+                    <div class="faculty-card">
+                        <div class="faculty-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="faculty-name">ผศ.ดร.สุชาญ์ ภักดีศรธุรกุลดี</h4>
+                        <p class="faculty-title">ประธานคณะ สาขาวิชา</p>
+                        <p class="faculty-department">วิศวกรรมซอฟต์แวร์</p>
+                        <p class="faculty-email">suchan@university.edu</p>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <div class="faculty-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="faculty-name">ผศ.ดร. วราเชษฐ์ ธุหรา</h4>
+                        <p class="faculty-title">รองประธานคณะ (ประธานสาขา)</p>
+                        <p class="faculty-department">วิศวกรรมซอฟต์แวร์</p>
+                        <p class="faculty-email">warachet@university.edu</p>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <div class="faculty-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="faculty-name">ผศ.สมเกียรติ ช่องเพื่อน</h4>
+                        <p class="faculty-title">รองประธานคณะ ฝ่ายโครงการและธุรกิจแนะแนม</p>
+                        <p class="faculty-department">วิศวกรรมซอฟต์แวร์</p>
+                        <p class="faculty-email">somkiat@university.edu</p>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <div class="faculty-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="faculty-name">อ.ดร. นิติ บุตรนะ</h4>
+                        <p class="faculty-title">อาจารย์ประจำสาขา</p>
+                        <p class="faculty-department">วิศวกรรมซอฟต์แวร์</p>
+                        <p class="faculty-email">niti@university.edu</p>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <div class="faculty-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="faculty-name">อ. ประณต สุขสม</h4>
+                        <p class="faculty-title">อาจารย์ประจำสาขา</p>
+                        <p class="faculty-department">วิศวกรรมซอฟต์แวร์</p>
+                        <p class="faculty-email">pranot@university.edu</p>
+                    </div>
+                </div>
+            </div>
             <div class="filter-tabs">
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
                     <div class="d-flex flex-wrap align-items-center">
@@ -574,9 +700,6 @@
                         </button>
                         <button class="tab-button" data-filter="news">
                             <i class="fas fa-newspaper"></i> ข่าวสาร
-                        </button>
-                        <button class="tab-button" data-filter="research">
-                            <i class="fas fa-flask"></i> ผลงาน
                         </button>
                         <button class="tab-button" data-filter="activity">
                             <i class="fas fa-calendar-check"></i> กิจกรรม
@@ -645,144 +768,6 @@
                     </div>
                 </div>
 
-                @foreach($news as $newsItem)
-                <div class="news-card" data-category="news">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        {{ $newsItem->publish_date->format('d F Y') }}
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">{{ $newsItem->title_th }}</h4>
-                        <p class="news-description">{{ Str::limit($newsItem->content_th, 150) }}</p>
-                    </div>
-                </div>
-                @endforeach
-
-                <!-- Research/Academic Content -->
-                <div class="news-card" data-category="research">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        29 September 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">สัมมนาวิจัย Software Architecture Patterns</h4>
-                        <p class="news-description">สัมมนาเพื่อแลกเปลี่ยนประสบการณ์ด้าน Software Architecture และแนวโน้มการพัฒนาในอนาคต</p>
-                    </div>
-                </div>
-
-                <div class="news-card" data-category="research">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        15 August 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">เจาะลึกนวัตกรรมคอมพิวเตอร์ซอฟต์แวร์</h4>
-                        <p class="news-description">ตรวจสอบและประเมินคุณภาพของซอฟต์แวร์ที่พัฒนา</p>
-                    </div>
-                </div>
-
-                <div class="news-card" data-category="research">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        10 July 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">วิศวกรรมซอฟต์แวร์</h4>
-                        <p class="news-description">องค์ประกอบและเซอร์วิสของซอฟต์แวร์ที่มีคุณภาพดีมีการ</p>
-                    </div>
-                </div>
-
-                <!-- Activity Content -->
-                <div class="news-card" data-category="activity">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        24 September 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">โครงการแนะน้องใหม่ด้านการเก็บข้อมูลใหม่</h4>
-                        <p class="news-description">กิจกรรมแนะแนวด้านการเก็บข้อมูลใหม่ พร้อมกิจกรรม Ice breaking</p>
-                    </div>
-                </div>
-
-                <div class="news-card" data-category="activity">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        14 September 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">ตรวจประกันคุณภาพการศึกษาตามใน ระดับหลักสูตร 2566</h4>
-                        <p class="news-description">กิจกรรมการตรวจประกันคุณภาพการศึกษาตามในหลักสูตร</p>
-                    </div>
-                </div>
-
-                <div class="news-card" data-category="activity">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        01 September 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">โปรแกรมแนะน้อง</h4>
-                        <p class="news-description">เชิญนิสิตและพี่เมนต์ในโครงการเมนทอร์ไซต์</p>
-                    </div>
-                </div>
-
-                <div class="news-card" data-category="activity">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        20 August 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">นักศึกษาขอขยาย</h4>
-                        <p class="news-description">กลยุทธ์ระบบขอขยายเวลาที่นำมาจึงยื่นขยายเวลาต่อ</p>
-                    </div>
-                </div>
-
-                <!-- Media Content -->
-                <div class="news-card" data-category="media">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        04 September 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">พักผ่อนยองใจ</h4>
-                        <p class="news-description">กิจกรรมพักผ่อนยองใจสำหรับนักศึกษา</p>
-                    </div>
-                </div>
-
-                <div class="news-card" data-category="media">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        12 August 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">สื่อประชาสัมพันธ์หลักสูตร</h4>
-                        <p class="news-description">วิดีโอแนะนำหลักสูตรและกิจกรรมต่างๆ ของภาควิชา</p>
-                    </div>
-                </div>
-
-                <!-- Other Content -->
-                <div class="news-card" data-category="other">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        19 September 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">เตรียมความพร้อม 2567</h4>
-                        <p class="news-description">กิจกรรมเตรียมความพร้อมสำหรับนักศึกษาใหม่ ปี 2567</p>
-                    </div>
-                </div>
-
-                <div class="news-card" data-category="other">
-                    <div class="news-date">
-                        <i class="fas fa-calendar"></i>
-                        05 August 2025
-                    </div>
-                    <div class="news-content">
-                        <h4 class="news-title">ประกาศผลการรับสมัคร</h4>
-                        <p class="news-description">ประกาศรายชื่อผู้ผ่านการคัดเลือกเข้าศึกษาต่อ</p>
-                    </div>
-                </div>
-            </div>
                 @foreach($news as $newsItem)
                 <div class="news-card" data-category="news">
                     <div class="news-date">
